@@ -1,5 +1,5 @@
 applicationType: default
-defaultPackage: com.inventorybot
+defaultPackage: com.inventorybot-service
 testFramework: junit
 sourceLanguage: kotlin
 buildTool: gradle

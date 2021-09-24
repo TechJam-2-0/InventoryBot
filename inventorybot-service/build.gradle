@@ -7,7 +7,7 @@ plugins {
 }
 
 version = "0.1"
-group = "com.inventorybot"
+group = "com.inventorybot-service"
 
 repositories {
     mavenCentral()
@@ -18,7 +18,7 @@ micronaut {
     testRuntime("junit5")
     processing {
         incremental(true)
-        annotations("com.inventorybot.*")
+        annotations("com.inventorybot-service.*")
     }
 }
 
@@ -42,7 +42,7 @@ dependencies {
 
 
 application {
-    mainClass.set("com.inventorybot.ApplicationKt")
+    mainClass.set("com.inventorybot-service.ApplicationKt")
 }
 java {
     sourceCompatibility = JavaVersion.toVersion("11")
