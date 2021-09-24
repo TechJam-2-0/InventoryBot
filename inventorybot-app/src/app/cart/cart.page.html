@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ product }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" id="cart">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ product }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="https://images.openfoodfacts.org/images/products/123456/front_en.103.400.jpg">
+      </ion-thumbnail>
+      <h2>My Neighbor Totoro</h2>
+      <p>Hayao Miyazaki • 1988</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="https://images.openfoodfacts.org/images/products/123456/front_en.103.400.jpg">
+      </ion-thumbnail>
+      <h2>Raiders of the Lost Ark</h2>
+      <p>Steven Spielberg • 1981</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="https://images.openfoodfacts.org/images/products/123456/front_en.103.400.jpg">
+      </ion-thumbnail>
+      <h2>Ghostbusters</h2>
+      <p>Ivan Reitman • 1984</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+
+  </ion-list>
+  <!-- <div id="container">
+    <strong class="capitalize">{{ product }}</strong>
+    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div> -->
+</ion-content>
+<ion-footer [translucent]="true">
+  <ion-toolbar>
+    <ion-button color="success" (click)="checkout()" slot="end">
+      Checkout
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
