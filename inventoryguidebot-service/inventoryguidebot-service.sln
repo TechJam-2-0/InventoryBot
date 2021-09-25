@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inventoryguidebot-api", "inventoryguidebot-service\inventoryguidebot-api.csproj", "{14C11F32-904C-4581-A480-BFED49C28CC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inventoryguidboat-repository", "inventoryguidboat-repository\inventoryguidboat-repository.csproj", "{445D969F-E43F-4FA0-847A-9B785E9034FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14C11F32-904C-4581-A480-BFED49C28CC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C11F32-904C-4581-A480-BFED49C28CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C11F32-904C-4581-A480-BFED49C28CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C11F32-904C-4581-A480-BFED49C28CC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{445D969F-E43F-4FA0-847A-9B785E9034FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{445D969F-E43F-4FA0-847A-9B785E9034FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{445D969F-E43F-4FA0-847A-9B785E9034FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{445D969F-E43F-4FA0-847A-9B785E9034FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0257E2B1-43F9-4764-B45A-022703896A2A}
+	EndGlobalSection
+EndGlobal

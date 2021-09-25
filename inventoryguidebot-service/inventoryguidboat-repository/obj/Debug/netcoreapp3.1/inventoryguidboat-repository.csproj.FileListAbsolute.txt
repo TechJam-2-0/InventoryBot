@@ -1,0 +1,12 @@
+C:\TechJam\Code\InventoryBot\InventoryBot\inventoryguidebot-service\inventoryguidboat-repository\bin\Debug\netcoreapp3.1\inventoryguidboat-repository.deps.json
+C:\TechJam\Code\InventoryBot\InventoryBot\inventoryguidebot-service\inventoryguidboat-repository\bin\Debug\netcoreapp3.1\inventoryguidboat-repository.dll
+C:\TechJam\Code\InventoryBot\InventoryBot\inventoryguidebot-service\inventoryguidboat-repository\bin\Debug\netcoreapp3.1\inventoryguidboat-repository.pdb
+C:\TechJam\Code\InventoryBot\InventoryBot\inventoryguidebot-service\inventoryguidboat-repository\obj\Debug\netcoreapp3.1\inventoryguidboat-repository.AssemblyInfoInputs.cache
+C:\TechJam\Code\InventoryBot\InventoryBot\inventoryguidebot-service\inventoryguidboat-repository\obj\Debug\netcoreapp3.1\inventoryguidboat-repository.AssemblyInfo.cs
+C:\TechJam\Code\InventoryBot\InventoryBot\inventoryguidebot-service\inventoryguidboat-repository\obj\Debug\netcoreapp3.1\inventoryguidboat-repository.csproj.CoreCompileInputs.cache
+C:\TechJam\Code\InventoryBot\InventoryBot\inventoryguidebot-service\inventoryguidboat-repository\obj\Debug\netcoreapp3.1\inventoryguidboat-repository.dll
+C:\TechJam\Code\InventoryBot\InventoryBot\inventoryguidebot-service\inventoryguidboat-repository\obj\Debug\netcoreapp3.1\inventoryguidboat-repository.pdb
+C:\TechJam\Code\InventoryBot\InventoryBot\inventoryguidebot-service\inventoryguidboat-repository\bin\Debug\netcoreapp3.1\snappy32.dll
+C:\TechJam\Code\InventoryBot\InventoryBot\inventoryguidebot-service\inventoryguidboat-repository\bin\Debug\netcoreapp3.1\snappy64.dll
+C:\TechJam\Code\InventoryBot\InventoryBot\inventoryguidebot-service\inventoryguidboat-repository\bin\Debug\netcoreapp3.1\libzstd.dll
+C:\TechJam\Code\InventoryBot\InventoryBot\inventoryguidebot-service\inventoryguidboat-repository\obj\Debug\netcoreapp3.1\inventoryguidboat-repository.csprojAssemblyReference.cache
