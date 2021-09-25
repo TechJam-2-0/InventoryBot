@@ -18,7 +18,7 @@ ion-content {
   color: #434343;
 }
 
-.cart-items {
+.order-items {
   ion-card {
       margin-left: 0;
       margin-right: 0;
@@ -56,36 +56,15 @@ ion-content {
                   color: var(--ion-color-primary);
               }
 
-              .qty-selector {
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  background: #f6f6f6;
-                  border-radius: 5px;
-                  margin-top: 10px;
+              .main-button {
+                  --border-radius: 5px;
+                  margin: 10px 0 0 0;
+              }
 
-                  ion-button {
-                      --color: #565656;
-                      font-size: 16px;
-                      margin-left: 8px;
-                      margin-right: 8px;
-                  }
-
-                  ion-label {
-                      color: #565656 !important;
-                      font-size: 16px;
-                  }
+              .main-button::after {
+                  box-shadow: none !important;
               }
           }
       }
-  }
-}
-
-ion-footer {
-  padding-left: 20px;
-  padding-right: 20px;
-
-  .main-button::after {
-      box-shadow: none !important;
   }
 }

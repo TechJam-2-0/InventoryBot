@@ -21,12 +21,20 @@ const routes: Routes = [
   },
   
   {
-    path: 'setting/:id',
-    loadChildren: () => import('./setting/setting.module').then( m => m.SettingPageModule)
+    path: 'orders/:id',
+    loadChildren: () => import('./orders/orders.module').then( m => m.OrdersPageModule)
   },
   {
     path: 'checkout/:id',
     loadChildren: () => import('./checkout/checkout.module').then( m => m.CheckoutPageModule)
+  },
+  {
+    path: 'confirm',
+    loadChildren: () => import('./confirm/confirm.module').then( m => m.ConfirmPageModule)
+  },
+  {
+    path: 'bot',
+    loadChildren: () => import('./bot/bot.module').then( m => m.BotPageModule)
   }
 ];
 
