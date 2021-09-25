@@ -8,6 +8,8 @@ import java.text.DecimalFormat
 import javax.inject.Singleton
 import com.inventorybot.repository.OrderRepository
 import com.inventorybot.model.OrderModel
+import com.inventorybot.logger
+import com.inventorybot.constants.InventoryConstant
 
 interface InventoryService {
   suspend fun getAllOrders(appRegisteredId:String):JsonNode?
@@ -20,7 +22,7 @@ class InventoryServiceImpl(private val orderRepository: OrderRepository):Invento
   companion object {
     private val LOGGER = logger(this)
   }
-  override suspend fun createOrder(order::List<OrderModel>): JsonNode? {
+  override suspend fun createOrder(order:List<OrderModel>): JsonNode? {
     TODO("Not yet implemented")
     return null
   }
@@ -35,7 +37,7 @@ class InventoryServiceImpl(private val orderRepository: OrderRepository):Invento
 
       when {
         orderResult.isNullOrEmpty() -> {
-          throw Exception(FinancialResultConstant.EMPTY_LIST)
+          throw Exception(InventoryConstant.EMPTY_LIST)
         }
         else -> {
           orderJsonNode = mapper.readTree(mapper.writeValueAsString(orderResult))

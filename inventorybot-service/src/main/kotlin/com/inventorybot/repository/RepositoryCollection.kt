@@ -2,7 +2,7 @@ package com.inventorybot.repository
 
 import com.mongodb.client.MongoCollection
 import com.mongodb.client.model.*
-import com.osmose.osmolytics.logger
+import com.inventorybot.logger
 import com.inventorybot.config.MongoClientConfig
 import org.bson.Document
 import javax.inject.Singleton

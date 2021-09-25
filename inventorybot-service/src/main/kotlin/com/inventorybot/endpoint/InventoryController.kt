@@ -16,7 +16,8 @@ import javax.validation.constraints.NotBlank
 import com.inventorybot.service.InventoryService
 import com.inventorybot.constants.InventoryConstant
 import com.inventorybot.model.OrderModel
-
+import com.inventorybot.logger
+import com.inventorybot.validation.InventoryValidation
 @Validated
 @Controller(InventoryConstant.BASE_ROUTE)
 class InventoryController(
@@ -27,7 +28,7 @@ class InventoryController(
     private val LOGGER = logger(this)
   }
   @Inject
-  lateinit var inventoryValidation: InventoryValidation
+  lateinit var inventoryValidation:InventoryValidation
   /**
    * Method Name:index - This is default method for the controller.
    */
@@ -90,7 +91,7 @@ class InventoryController(
     return try {
 
       val orderResults =
-        runBlocking { inventoryService.getAllOrders() }
+        runBlocking { inventoryService.getAllOrders("wwww") }
       when {
         orderResults?.size() == 0 -> {
           throw Exception(InventoryConstant.EMPTY_LIST)

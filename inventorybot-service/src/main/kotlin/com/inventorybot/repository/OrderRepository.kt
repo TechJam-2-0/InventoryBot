@@ -6,7 +6,9 @@ import org.bson.Document
 import java.util.*
 import javax.inject.Inject
 import javax.inject.Singleton
-import com.inventorybot.model
+import com.inventorybot.model.*
+import com.inventorybot.logger
+import com.inventorybot.constants.InventoryConstant
 
 interface OrderRepository {
   fun getAllOrders(appRegisteredId:String): List<Document>?
@@ -31,7 +33,7 @@ class OrderRepositoryImpl:OrderRepository {
 
   override fun getAllOrders(appRegisteredId:String): List<Document>? {
     LOGGER.info("Get All Orders")
-
+    var orderDocumentResult:List<Document>?
     try {
       val appRegisteredFilter = Filters.eq("appRegisteredId", appRegisteredId)
       var indexFields:MutableList<String>? = mutableListOf()
