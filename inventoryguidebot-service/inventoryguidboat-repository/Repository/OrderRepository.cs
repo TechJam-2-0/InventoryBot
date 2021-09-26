@@ -13,6 +13,7 @@ namespace inventoryguidboat_repository.Repository
         private readonly MongoConfig mongoConfig;
         private readonly MongoClient MongoClientConfig;
         protected IMongoCollection<OrderModel> collectionInventory;
+
         public OrderRepository()
         {
             mongoConfig = new MongoConfig();

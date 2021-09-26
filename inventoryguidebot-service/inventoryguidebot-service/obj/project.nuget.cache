@@ -1,13 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "NayvYFONFJLfFUak/6FnKzXJrNd39CCWUuBeBzViPFjGrdYsOulYYBXVhzwP9Ueif9/iY4rCdeBKLMa/paaHdw==",
+  "dgSpecHash": "McJTaTHOstLP0st3C3OiZ41YN71zHazO0y1PDx766x08Mhk2DqVIWA90PhhGzVcwwG8ySypPNNPBMiypfCSR9g==",
   "success": true,
   "projectFilePath": "C:\\TechJam\\Code\\InventoryBot\\InventoryBot\\inventoryguidebot-service\\inventoryguidebot-service\\inventoryguidebot-api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ac44190\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
     "C:\\Users\\ac44190\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\2.0.4\\microsoft.dotnet.platformabstractions.2.0.4.nupkg.sha512",
+    "C:\\Users\\ac44190\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
+    "C:\\Users\\ac44190\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\ac44190\\.nuget\\packages\\microsoft.extensions.dependencymodel\\2.0.4\\microsoft.extensions.dependencymodel.2.0.4.nupkg.sha512",
     "C:\\Users\\ac44190\\.nuget\\packages\\microsoft.extensions.platformabstractions\\1.1.0\\microsoft.extensions.platformabstractions.1.1.0.nupkg.sha512",
+    "C:\\Users\\ac44190\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\ac44190\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\ac44190\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\ac44190\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

@@ -45,6 +45,7 @@ namespace inventoryguidboat_repository.Repository
                         ProductModel prod = new ProductModel();
                         prod.ProductId = product["productId"].AsString;
                         prod.ProductName = product["productName"].AsString;
+                        prod.ProductDescription = product["productDescription"].AsString;
                         prod.ProductPrice = product["productPrice"].AsInt32;
                         productList.Add(prod);
                     }

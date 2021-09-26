@@ -26,9 +26,12 @@ namespace Inventoryguidebot.api.Routes.V1
         }
         public static class ProductRoutes
         {
-            public const string GetAllProductsByStoreId = Base + "/getAllProductsByStoreId";
-            
+            public const string GetAllProductsByStoreId = Base + "/getAllProductsByStoreId";            
 
+        }
+        public static class PaymentTransactionRoutes
+        {
+            public const string GetAllPaymentTransactionByAppIdStoreId = Base + "/getAllPaymentTransactionByAppIdStoreId";
         }
     }
 }

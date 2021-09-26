@@ -1,5 +1,6 @@
 using inventoryguidboat.RepositoryInterface;
 using inventoryguidboat_repository.Repository;
+using inventoryguidboat_repository.RepositoryInterface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -30,6 +31,7 @@ namespace Inventoryguidebot.api
         {
             services.AddSingleton<IProductRepository, ProductRepository>();
             services.AddSingleton<IInvetnoryRepository, OrderRepository>();
+            services.AddSingleton<IPaymentTransaction, PaymentTransactionRepository>();
 
             services.AddMvc(option =>
             {
