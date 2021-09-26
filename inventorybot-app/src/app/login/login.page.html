@@ -13,7 +13,10 @@
 
     <div class="button-container">
       <ion-text>Scan a QRCode or Barcode to login to store</ion-text>
-      <ion-button expand="block" class="main-button" (click)="openBarCodeScanner()" routerDirection="forward">Log in</ion-button>
+      <ion-button expand="block" class="main-button" (click)="openBarCodeScanner()" routerDirection="forward">
+        <ion-icon slot="start" name="scan"></ion-icon>
+        <ion-label>Log in</ion-label>
+      </ion-button>
       <!-- <ion-button expand="block" color="dark" fill="clear" routerLink="/signup" routerDirection="forward">Signup</ion-button> -->
     </div>
   </div>

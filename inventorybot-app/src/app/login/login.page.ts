@@ -26,7 +26,7 @@ export class LoginPage implements OnInit {
     this.commonService.updateLoggedIn(true);
   }
   openBarCodeScanner(){
-    this.getProductWithBarCode("123456");//comment this if you want to test barcode scanning
+    //this.getProductWithBarCode("123456");//comment this if you want to test barcode scanning
     this.barcodeScanner.scan().then(barcodeData => {
       console.log('Barcode data', barcodeData);
       this.barCode = barcodeData
@@ -55,13 +55,18 @@ export class LoginPage implements OnInit {
         'content-type': 'application/json',
       }
     });
-    console.log(ret.data)
-    if (ret.data){
-      this.productInformation = ret.data;
+    console.log(ret)
+    if (ret){
+      this.productInformation = ret;
       console.log("==Product ",this.productInformation.product)
       localStorage.setItem("loggedin","isLoggedIn");
+      localStorage.setItem("storeName","Metro Cash & Carry Store");
+      localStorage.setItem("storeID","9b37ed16-9618-4154-b9db-b57f35c12808");
+      localStorage.setItem("storeLocation","Kanakpura Road");
+      localStorage.setItem("appRegisteredId","edb3ac37-311e-43eb-bf9e-4d5a977e9979");
       this.router.navigate(['/product/Product'])
       this.commonService.updateLoggedIn(true);
+      
     }
   }
 }

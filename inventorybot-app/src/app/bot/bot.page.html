@@ -16,18 +16,20 @@
 
 <ion-content>
   <ion-list no-lines>
-    <ion-item *ngFor="let msg of messages">
-      <div>
-        <div class="chat-bubble {{msg.type === messageType.MSG_REQ ? 'right' : 'left'}}">
-          <div class="message">{{msg.message}}</div>
-          <div class="message-detail" style="float:right">
-            <span>{{msg.epoch}}</span>
+    <ng-container *ngFor="let msg of messages">
+      <ion-item expand="block" lines="none" class="{{msg.type === 'message_request' ? 'floatLeft' : 'floatRight'}}">
+        <div>
+          <div class="chat-bubble {{msg.type === 'message_request' ? 'left' : 'right'}}">
+            <div class="message">{{msg.message}}</div>
+            <div class="message-detail" style="float:right">
+              <span>{{msg.epoch}}</span>
+            </div>
           </div>
         </div>
-      </div>
-    </ion-item>
+      </ion-item>
+    </ng-container>
   </ion-list>
-</ion-content>
+</ion-content> 
 <ion-footer translucent="true" class="ion-no-border" mode="md">
   <ion-toolbar color="translucent">
     <ion-item>

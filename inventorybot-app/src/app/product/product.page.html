@@ -3,124 +3,154 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ product }}</ion-title>
+    <!-- <ion-title>{{ product }}</ion-title> -->
+    <ion-buttons slot="end">
+      <ion-button class="notification" routerLink="/cart/Cart" routerDirection="forward">
+        <ion-icon name="cart-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-slides pager="true" class="product-slider">
-    <ion-slide>
-      <img src="../../assets/product-slider/prod-slide1.png" />
-    </ion-slide>
-    <ion-slide>
-      <img src="../../assets/product-slider/prod-slide1.png" />
-    </ion-slide>
-    <ion-slide>
-      <img src="../../assets/product-slider/prod-slide1.png" />
-    </ion-slide>
-  </ion-slides>
+  
+  <div class="container" *ngIf="addProduct">
+    <div class="page-header">
+      <h1>Welcome to {{storeName}}</h1>
+      <h3>Explore Us</h3>
+    </div>
 
-  <div class="ion-padding-vertical">
-    <h1 class="item-name">Black turtleneck top</h1>
+    <img src="../../assets/welcome.png" />
 
-    <h4 class="price">
-      $42
-      <span class="real-price">$62</span>
-    </h4>
+    <div class="button-container">
+      <ion-text>Scan a QRCode or Barcode to get product details from store</ion-text>
+      <ion-button expand="block" class="main-button" (click)="openBarCodeScanner()" routerDirection="forward">
+        <ion-icon slot="start" name="scan"></ion-icon>
+        <ion-label>Scan Product</ion-label>
+      </ion-button>
+      <!-- <ion-button expand="block" color="dark" fill="clear" routerLink="/signup" routerDirection="forward">Signup</ion-button> -->
+    </div>
   </div>
-
-  <div class="seperator">
-    <hr>
-  </div>
-
-  <div class="review">
-    <ion-row>
-      <ion-col size="6">
-        <div class="rating">
-          4.5
+  <div *ngIf="productDetails">
+    <ion-slides pager="true" class="product-slider">
+      <ion-slide>
+        <img src="../../assets/product-slider/{{productInformation.productId}}-1.png" />
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/product-slider/{{productInformation.productId}}-2.png" />
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/product-slider/{{productInformation.productId}}-3.png" />
+      </ion-slide>
+    </ion-slides>
+  
+    <div class="ion-padding-vertical">
+      <h1 class="item-name">{{productInformation.productName}}</h1>
+  
+      <h4 class="price">
+        Rs {{productInformation.productPrice}}
+        <!-- <span class="real-price">Rs 62</span> -->
+      </h4>
+    </div>
+  
+    <div class="seperator">
+      <hr>
+    </div>
+  
+    <!-- <div class="review">
+      <ion-row>
+        <ion-col size="6">
+          <div class="rating">
+            4.5
+          </div>
+  
+          Very Good
+        </ion-col>
+        <ion-col size="6">
+          <div class="count">49 Reviews</div>
+        </ion-col>
+      </ion-row>
+    </div> -->
+  
+    <div class="seperator">
+      <hr>
+    </div>
+  
+    <div class="description">
+      <h5>Description</h5>
+  
+      <p>
+        {{productInformation.description}}
+      </p>
+  
+    </div>
+  
+    <div class="seperator">
+      <hr>
+    </div>
+  
+    <div class="variation">
+      <ion-segment (ionChange)="segmentChanged($event)" value="size">
+        <ion-segment-button value="size">
+          <ion-label>Quantity</ion-label>
+        </ion-segment-button>
+        <!-- <ion-segment-button value="color">
+          <ion-label>Select Color</ion-label>
+        </ion-segment-button> -->
+      </ion-segment>
+    </div>
+  
+    <div class="seperator">
+      <hr>
+    </div>
+    <div class="qty-selector">
+      <ion-button fill="clear" (click)="removeQty()">-</ion-button>
+      <ion-label>{{productInformation.qty}}</ion-label>
+      <ion-button fill="clear" (click)="addQty()">+</ion-button>
+    </div>
+    <!-- <div class="variation-selector">
+      <div class="sizes" [class.active-variation]="activeVariation == 'size'">
+        <div [class.active]="selectedSize == 1" (click)="changeSize(1)">
+          S
         </div>
-
-        Very Good
-      </ion-col>
-      <ion-col size="6">
-        <div class="count">49 Reviews</div>
-      </ion-col>
-    </ion-row>
-  </div>
-
-  <div class="seperator">
-    <hr>
-  </div>
-
-  <div class="description">
-    <h5>Description</h5>
-
-    <p>
-      A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
-    </p>
-
-  </div>
-
-  <div class="seperator">
-    <hr>
-  </div>
-
-  <div class="variation">
-    <ion-segment (ionChange)="segmentChanged($event)" value="size">
-      <ion-segment-button value="size">
-        <ion-label>Select Size</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="color">
-        <ion-label>Select Color</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-  </div>
-
-  <div class="seperator">
-    <hr>
-  </div>
-
-  <div class="variation-selector">
-    <div class="sizes" [class.active-variation]="activeVariation == 'size'">
-      <div [class.active]="selectedSize == 1" (click)="changeSize(1)">
-        S
+        <div [class.active]="selectedSize == 2" (click)="changeSize(2)">
+          M
+        </div>
+        <div [class.active]="selectedSize == 3" (click)="changeSize(3)">
+          L
+        </div>
+        <div [class.active]="selectedSize == 4" (click)="changeSize(4)">
+          XL
+        </div>
       </div>
-      <div [class.active]="selectedSize == 2" (click)="changeSize(2)">
-        M
+  
+      <div class="colors" [class.active-variation]="activeVariation == 'color'">
+        <div [class.active]="selectedColor == 1" (click)="changeColor(1)">
+          BLACK
+        </div>
+        <div [class.active]="selectedColor == 2" (click)="changeColor(2)">
+          GREEN
+        </div>
+        <div [class.active]="selectedColor == 3" (click)="changeColor(3)">
+          BLUE
+        </div>
       </div>
-      <div [class.active]="selectedSize == 3" (click)="changeSize(3)">
-        L
-      </div>
-      <div [class.active]="selectedSize == 4" (click)="changeSize(4)">
-        XL
-      </div>
-    </div>
-
-    <div class="colors" [class.active-variation]="activeVariation == 'color'">
-      <div [class.active]="selectedColor == 1" (click)="changeColor(1)">
-        BLACK
-      </div>
-      <div [class.active]="selectedColor == 2" (click)="changeColor(2)">
-        GREEN
-      </div>
-      <div [class.active]="selectedColor == 3" (click)="changeColor(3)">
-        BLUE
-      </div>
-    </div>
+    </div> -->
   </div>
+  
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button routerLink="/bot">
       <ion-icon name="chatbubbles"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 </ion-content>
-<ion-footer>
+<ion-footer *ngIf="productDetails">
   <ion-row>
     <ion-col size="6">
-      <ion-button expand="full" color="light">Add to cart</ion-button>
+      <ion-button expand="full" (click)="addToCart()" color="light">Add to cart</ion-button>
     </ion-col>
     <ion-col size="6">
-      <ion-button expand="full">Buy now</ion-button>
+      <ion-button expand="full" (click)="buynow()">Buy now</ion-button>
     </ion-col>
   </ion-row>
 </ion-footer>

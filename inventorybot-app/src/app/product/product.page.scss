@@ -160,8 +160,44 @@ ion-footer {
       }
   }
 }
+.qty-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f6f6f6;
+  border-radius: 5px;
+  margin-top: 10px;
 
+  ion-button {
+      --color: #565656;
+      font-size: 16px;
+      margin-left: 8px;
+      margin-right: 8px;
+  }
+
+  ion-label {
+      color: #565656 !important;
+      font-size: 16px;
+  }
+}
 // This will remove footer shadow on android
 .footer-md::before {
   background-image: none !important;
+}
+.container {
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+}
+
+.page-header h1 {
+  margin-top: 0;
+}
+
+.button-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }

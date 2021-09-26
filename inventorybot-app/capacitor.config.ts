@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'grocery-app',
+  appName: 'Inventory Bot',
   webDir: 'www',
   bundledWebRuntime: false
 };

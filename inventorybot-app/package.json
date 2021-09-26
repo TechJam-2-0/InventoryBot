@@ -1,7 +1,7 @@
 {
-  "name": "grocery-app",
+  "name": "inventory-bot",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Sujoy",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
@@ -27,7 +27,12 @@
     "@capacitor/keyboard": "1.0.3",
     "@capacitor/status-bar": "1.0.3",
     "@ionic-native/barcode-scanner": "^5.36.0",
+    "@ionic-native/geolocation": "^5.36.0",
+    "@ionic-native/native-geocoder": "^5.36.0",
     "@ionic/angular": "^5.5.2",
+    "capacitor-razorpay": "github:razorpay/razorpay-capacitor",
+    "cordova-plugin-geolocation": "^4.1.0",
+    "cordova-plugin-nativegeocoder": "^3.4.1",
     "phonegap-plugin-barcodescanner": "^8.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
@@ -66,5 +71,5 @@
     "ts-node": "~8.3.0",
     "typescript": "~4.2.4"
   },
-  "description": "An Ionic project"
+  "description": "An Inventory Bot app"
 }

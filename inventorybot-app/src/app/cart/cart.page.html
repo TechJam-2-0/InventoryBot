@@ -5,10 +5,10 @@
         <img src="../../assets/back-dark.svg" />
       </ion-buttons>
     </ion-buttons>
-
+    <ion-title>{{ storeName }}</ion-title>
     <ion-buttons slot="end">
-      <ion-button class="notification">
-        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+      <ion-button class="notification" routerLink="/bot">
+        <ion-icon name="chatbubbles" color="dark"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -16,29 +16,40 @@
 
 <ion-content fullscreen="true">
   <h1 class="title">Cart</h1>
+  <div class="container" *ngIf="cartItems.length == 0">
+    <div class="page-header">
+      <h1>Oops!! Your Cart is Empty.</h1>
+      <h3>Lets add some product</h3>
+    </div>
 
-  <div class="cart-items">
-    <ion-card mode="ios">
+    <div class="button-container">
+      <ion-button expand="block" routerLink="/product/Product" routerDirection="forward">
+        <ion-label>Add Product</ion-label>
+      </ion-button>
+    </div>
+  </div>
+  <div class="cart-items" *ngIf="cartItems.length >= 1">
+    <ion-card mode="ios" *ngFor="let cartIt of cartItems">
       <ion-card-content>
         <div class="item-img">
-          <img src="../../assets/cart/cart1.png" />
+          <img src="../../assets/cart/{{cartIt.productId}}.png" />
         </div>
 
         <div class="item-info">
-          <p>Women t-shirt</p>
-          <p>Lotto.LTD</p>
-          <p>$34.00</p>
+          <p>{{cartIt.productName}}</p>
+          <p>{{storeName}}</p>
+          <p>Rs {{cartIt.productPrice}}</p>
 
           <div class="qty-selector">
-            <ion-button fill="clear">-</ion-button>
-            <ion-label>1</ion-label>
-            <ion-button fill="clear">+</ion-button>
+            <ion-button fill="clear" (click)="removeQty(cartIt)">-</ion-button>
+            <ion-label>{{cartIt.productQty}}</ion-label>
+            <ion-button fill="clear" (click)="addQty(cartIt)">+</ion-button>
           </div>
         </div>
       </ion-card-content>
     </ion-card>
 
-    <ion-card mode="ios">
+    <!-- <ion-card mode="ios">
       <ion-card-content>
         <div class="item-img">
           <img src="../../assets/cart/cart2.png" />
@@ -57,70 +68,11 @@
         </div>
       </ion-card-content>
     </ion-card>
-
-    <ion-card mode="ios">
-      <ion-card-content>
-        <div class="item-img">
-          <img src="../../assets/cart/cart3.png" />
-        </div>
-
-        <div class="item-info">
-          <p>Shirt</p>
-          <p>Next</p>
-          <p>$54.00</p>
-
-          <div class="qty-selector">
-            <ion-button fill="clear">-</ion-button>
-            <ion-label>1</ion-label>
-            <ion-button fill="clear">+</ion-button>
-          </div>
-        </div>
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card mode="ios">
-      <ion-card-content>
-        <div class="item-img">
-          <img src="../../assets/cart/cart4.png" />
-        </div>
-
-        <div class="item-info">
-          <p>Women shirt</p>
-          <p>Plus Point</p>
-          <p>$34.00</p>
-
-          <div class="qty-selector">
-            <ion-button fill="clear">-</ion-button>
-            <ion-label>1</ion-label>
-            <ion-button fill="clear">+</ion-button>
-          </div>
-        </div>
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card mode="ios">
-      <ion-card-content>
-        <div class="item-img">
-          <img src="../../assets/cart/cart5.png" />
-        </div>
-
-        <div class="item-info">
-          <p>Shirt</p>
-          <p>Cat's Eye</p>
-          <p>$44.00</p>
-
-          <div class="qty-selector">
-            <ion-button fill="clear">-</ion-button>
-            <ion-label>1</ion-label>
-            <ion-button fill="clear">+</ion-button>
-          </div>
-        </div>
-      </ion-card-content>
-    </ion-card>
+    -->
   </div>
 </ion-content>
 <ion-footer translucent="true" class="ion-no-border" mode="md">
   <ion-toolbar color="translucent">
-    <ion-button expand="block" class="main-button" routerLink="/checkout/Checkout" routerDirection="forward">Continue</ion-button>
+    <ion-button expand="block" class="main-button" routerLink="/checkout/Checkout" *ngIf="cartItems.length >= 1" routerDirection="forward">Continue</ion-button>
   </ion-toolbar>
 </ion-footer>

@@ -15,7 +15,8 @@ export class AppComponent implements OnInit, OnDestroy {
     { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
     { title: 'Archived', url: '/folder/Archived', icon: 'archive' }, */
     { title: 'Cart', url: '/cart/Cart', icon: 'cart' },
-    { title: 'My Orders', url: '/orders/Orders', icon: 'settings' }
+    { title: 'My Orders', url: '/orders/Orders', icon: 'reorder-three' },
+    { title: 'My Payments', url: '/payments', icon: 'card' }
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   public loggedin:boolean = true;

@@ -1,0 +1,25 @@
+<ion-header>  
+  <ion-toolbar>  
+    <ion-title>Order Details :{{order.orderId}}</ion-title>  
+    
+    <ion-buttons slot="end">
+      <ion-button class="notification" (click)='dismiss()'>
+        <ion-icon name='close-circle' ></ion-icon> 
+      </ion-button>
+    </ion-buttons> 
+  </ion-toolbar>  
+</ion-header>  
+  
+<ion-content>  
+  <ion-list>  
+    <ion-item *ngFor="let prd of order.products">  
+      <ion-avatar slot="start">  
+        <img src="../../assets/cart/{{prd.productId}}.png" />
+      </ion-avatar>  
+      <ion-label>  
+        <h2>{{prd.productName}}</h2>  
+        <p>Rs. {{prd.productPrice}}</p>  
+      </ion-label>  
+    </ion-item>    
+  </ion-list>  
+</ion-content>  

@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" class="backbtn" routerLink="/product/Product" routerDirection="back">
+        <img src='../../assets/back-dark.svg' />
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button class="notification">
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Skeleton screen -->
+<div *ngIf="payments.length == 0">
+  <!-- <div class="ion-padding custom-skeleton">
+    <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+    <ion-skeleton-text animated></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+  </div> -->
+  <h1 class="title"><ion-skeleton-text animated style="width: 20%"></ion-skeleton-text></h1>
+  <div class="order-items">
+    <ion-list>
+      <ion-item>
+        <ion-skeleton-text animated style="width: 27px; height: 27px" slot="start"></ion-skeleton-text>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-skeleton-text animated style="width: 27px; height: 27px" slot="start"></ion-skeleton-text>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-skeleton-text animated style="width: 27px; height: 27px" slot="start"></ion-skeleton-text>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</div>
+<!-- Skeleton screen -->
+<div *ngIf="payments.length >= 1">
+  <h1 class="title">My Payments</h1>
+
+  <div class="order-items">
+    <ion-card mode="ios" *ngFor="let pyt of payments">
+      <ion-card-content>
+        <!-- <div class="item-img">
+          <img src='../../assets/cart/cart1.png' />
+        </div> -->
+
+        <div class="item-info">
+          <p>Payment ID: {{pyt.transactionId}}</p>
+          <p>Order ID : {{pyt.orderId}}</p>
+          <p>Transaction Amount: {{pyt.transactionAmount}}</p>
+          <p>Store: {{pyt.storeName}}</p>
+          <p>Date: {{pyt.transactionDate}}</p>
+          <!-- <ion-datetime [value]="getOrderDate(ord.createdDate)" display-timezone="utc"></ion-datetime> -->
+          <!-- <ion-button expand="block" class="main-button">Order Again</ion-button> -->
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <!-- <ion-card mode="ios">
+      <ion-card-content>
+        <div class="item-img">
+          <img src='../../assets/cart/cart2.png' />
+        </div>
+
+        <div class="item-info">
+          <p>Female t-shirt</p>
+          <p>Bata</p>
+          <p>$44.00</p>
+
+          <ion-button expand="block" class="main-button">Order Again</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card> -->
+    
+  </div>
+</div>
+  
+</ion-content>

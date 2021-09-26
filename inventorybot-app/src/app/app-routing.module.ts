@@ -35,6 +35,18 @@ const routes: Routes = [
   {
     path: 'bot',
     loadChildren: () => import('./bot/bot.module').then( m => m.BotPageModule)
+  },
+  {
+    path: 'modal',
+    loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
+  },
+  {
+    path: 'payments',
+    loadChildren: () => import('./payments/payments.module').then( m => m.PaymentsPageModule)
+  },
+  {
+    path: 'modalpay',
+    loadChildren: () => import('./modalpay/modalpay.module').then( m => m.ModalpayPageModule)
   }
 ];
 
