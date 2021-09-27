@@ -7,7 +7,7 @@
     </ion-buttons>
 
     <ion-buttons slot="end">
-      <ion-button class="notification">
+      <ion-button class="notification" routerLink="/product/Product">
         <ion-icon name="notifications-outline" color="dark"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -20,7 +20,8 @@
       <ion-item expand="block" lines="none" class="{{msg.type === 'message_request' ? 'floatLeft' : 'floatRight'}}">
         <div>
           <div class="chat-bubble {{msg.type === 'message_request' ? 'left' : 'right'}}">
-            <div class="message">{{msg.message}}</div>
+            <!-- <div class="message">{{msg.message}}</div> -->
+            <div class="message" [innerHtml]="msg.message"></div>
             <div class="message-detail" style="float:right">
               <span>{{msg.epoch}}</span>
             </div>

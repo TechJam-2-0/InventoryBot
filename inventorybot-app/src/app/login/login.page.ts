@@ -64,7 +64,7 @@ export class LoginPage implements OnInit {
       localStorage.setItem("storeID","9b37ed16-9618-4154-b9db-b57f35c12808");
       localStorage.setItem("storeLocation","Kanakpura Road");
       localStorage.setItem("appRegisteredId","edb3ac37-311e-43eb-bf9e-4d5a977e9979");
-      this.router.navigate(['/product/Product'])
+      this.router.navigate(['/bot'])
       this.commonService.updateLoggedIn(true);
       
     }
